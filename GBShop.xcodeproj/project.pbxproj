@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		7825F218275CADE3001EEABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F217275CADE3001EEABB /* AppDelegate.swift */; };
 		7825F21A275CADE3001EEABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F219275CADE3001EEABB /* SceneDelegate.swift */; };
-		7825F21C275CADE3001EEABB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F21B275CADE3001EEABB /* ViewController.swift */; };
-		7825F21F275CADE3001EEABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7825F21D275CADE3001EEABB /* Main.storyboard */; };
 		7825F221275CADEA001EEABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7825F220275CADEA001EEABB /* Assets.xcassets */; };
 		7825F224275CADEA001EEABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7825F222275CADEA001EEABB /* LaunchScreen.storyboard */; };
 		7825F22F275CADEB001EEABB /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F22E275CADEB001EEABB /* GBShopTests.swift */; };
@@ -39,8 +37,6 @@
 		7825F214275CADE3001EEABB /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7825F217275CADE3001EEABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7825F219275CADE3001EEABB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7825F21B275CADE3001EEABB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7825F21E275CADE3001EEABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7825F220275CADEA001EEABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7825F223275CADEA001EEABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7825F225275CADEA001EEABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +95,10 @@
 		7825F216275CADE3001EEABB /* GBShop */ = {
 			isa = PBXGroup;
 			children = (
-				7825F217275CADE3001EEABB /* AppDelegate.swift */,
-				7825F219275CADE3001EEABB /* SceneDelegate.swift */,
-				7825F21B275CADE3001EEABB /* ViewController.swift */,
-				7825F21D275CADE3001EEABB /* Main.storyboard */,
-				7825F220275CADEA001EEABB /* Assets.xcassets */,
-				7825F222275CADEA001EEABB /* LaunchScreen.storyboard */,
-				7825F225275CADEA001EEABB /* Info.plist */,
+				7825F251275D27B8001EEABB /* App */,
+				7825F256275D2823001EEABB /* Core */,
+				7825F257275D2833001EEABB /* Resources */,
+				7825F258275D2846001EEABB /* Environments */,
 			);
 			path = GBShop;
 			sourceTree = "<group>";
@@ -125,6 +118,71 @@
 				7825F23A275CADEB001EEABB /* GBShopUITestsLaunchTests.swift */,
 			);
 			path = GBShopUITests;
+			sourceTree = "<group>";
+		};
+		7825F251275D27B8001EEABB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7825F217275CADE3001EEABB /* AppDelegate.swift */,
+				7825F219275CADE3001EEABB /* SceneDelegate.swift */,
+				7825F252275D27CD001EEABB /* BusinessLogic */,
+				7825F253275D27E4001EEABB /* Entity */,
+				7825F254275D27FD001EEABB /* Assembly */,
+				7825F255275D280E001EEABB /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7825F252275D27CD001EEABB /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		7825F253275D27E4001EEABB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7825F254275D27FD001EEABB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		7825F255275D280E001EEABB /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		7825F256275D2823001EEABB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7825F257275D2833001EEABB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7825F220275CADEA001EEABB /* Assets.xcassets */,
+				7825F222275CADEA001EEABB /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7825F258275D2846001EEABB /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				7825F225275CADEA001EEABB /* Info.plist */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +291,6 @@
 			files = (
 				7825F224275CADEA001EEABB /* LaunchScreen.storyboard in Resources */,
 				7825F221275CADEA001EEABB /* Assets.xcassets in Resources */,
-				7825F21F275CADE3001EEABB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7825F21C275CADE3001EEABB /* ViewController.swift in Sources */,
 				7825F218275CADE3001EEABB /* AppDelegate.swift in Sources */,
 				7825F21A275CADE3001EEABB /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7825F21D275CADE3001EEABB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7825F21E275CADE3001EEABB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7825F222275CADEA001EEABB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,11 +487,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9C225GKLRU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GBShop/Info.plist;
+				INFOPLIST_FILE = GBShop/Environments/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,11 +515,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9C225GKLRU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GBShop/Info.plist;
+				INFOPLIST_FILE = GBShop/Environments/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
