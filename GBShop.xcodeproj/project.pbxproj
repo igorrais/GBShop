@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78231CB7275E9EA90052F5D4 /* BusinessLogicStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78231CB6275E9EA90052F5D4 /* BusinessLogicStub.swift */; };
+		78231CB9275E9F020052F5D4 /* EntityStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78231CB8275E9F020052F5D4 /* EntityStub.swift */; };
+		78231CBB275E9F260052F5D4 /* AssemblyStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78231CBA275E9F260052F5D4 /* AssemblyStub.swift */; };
+		78231CBD275E9F6E0052F5D4 /* FlowsStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78231CBC275E9F6E0052F5D4 /* FlowsStub.swift */; };
+		78231CC1275EA1160052F5D4 /* CoreStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78231CC0275EA1160052F5D4 /* CoreStub.swift */; };
 		7825F218275CADE3001EEABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F217275CADE3001EEABB /* AppDelegate.swift */; };
 		7825F21A275CADE3001EEABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F219275CADE3001EEABB /* SceneDelegate.swift */; };
 		7825F221275CADEA001EEABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7825F220275CADEA001EEABB /* Assets.xcassets */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78231CB6275E9EA90052F5D4 /* BusinessLogicStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLogicStub.swift; sourceTree = "<group>"; };
+		78231CB8275E9F020052F5D4 /* EntityStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityStub.swift; sourceTree = "<group>"; };
+		78231CBA275E9F260052F5D4 /* AssemblyStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyStub.swift; sourceTree = "<group>"; };
+		78231CBC275E9F6E0052F5D4 /* FlowsStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowsStub.swift; sourceTree = "<group>"; };
+		78231CC0275EA1160052F5D4 /* CoreStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreStub.swift; sourceTree = "<group>"; };
 		7825F214275CADE3001EEABB /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7825F217275CADE3001EEABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7825F219275CADE3001EEABB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +146,7 @@
 		7825F252275D27CD001EEABB /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				78231CB6275E9EA90052F5D4 /* BusinessLogicStub.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 		7825F253275D27E4001EEABB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				78231CB8275E9F020052F5D4 /* EntityStub.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -150,6 +162,7 @@
 		7825F254275D27FD001EEABB /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				78231CBA275E9F260052F5D4 /* AssemblyStub.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -157,6 +170,7 @@
 		7825F255275D280E001EEABB /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				78231CBC275E9F6E0052F5D4 /* FlowsStub.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -164,6 +178,7 @@
 		7825F256275D2823001EEABB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				78231CC0275EA1160052F5D4 /* CoreStub.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -315,8 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78231CC1275EA1160052F5D4 /* CoreStub.swift in Sources */,
+				78231CB7275E9EA90052F5D4 /* BusinessLogicStub.swift in Sources */,
+				78231CBD275E9F6E0052F5D4 /* FlowsStub.swift in Sources */,
 				7825F218275CADE3001EEABB /* AppDelegate.swift in Sources */,
+				78231CB9275E9F020052F5D4 /* EntityStub.swift in Sources */,
 				7825F21A275CADE3001EEABB /* SceneDelegate.swift in Sources */,
+				78231CBB275E9F260052F5D4 /* AssemblyStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
