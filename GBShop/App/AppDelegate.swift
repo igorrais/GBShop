@@ -22,6 +22,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+        auth.logout(idUser: 123) { response in
+            switch response.result {
+            case .success(let logout):
+                print(logout)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        let change = requestFactory.makeRegistrationAndChangePersonalDataFactory()
+        change.changePersonalData(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language") { response in
+            switch response.result {
+            case .success(let changePersonalData):
+                print(changePersonalData)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         return true
     }
     

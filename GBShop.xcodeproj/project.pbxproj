@@ -26,7 +26,12 @@
 		78FB1E272764BF3700F4B3D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E262764BF3700F4B3D1 /* User.swift */; };
 		78FB1E2A2764BFDE00F4B3D1 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E292764BFDE00F4B3D1 /* AuthRequestFactory.swift */; };
 		78FB1E2C2764C01F00F4B3D1 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E2B2764C01F00F4B3D1 /* Auth.swift */; };
-		78FB1E2E2764C13300F4B3D1 /*  RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E2D2764C13300F4B3D1 /*  RequestFactory.swift */; };
+		78FB1E2E2764C13300F4B3D1 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E2D2764C13300F4B3D1 /* RequestFactory.swift */; };
+		78FB1E332764D8E000F4B3D1 /* RegistrationAndChangePersonalDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E322764D8E000F4B3D1 /* RegistrationAndChangePersonalDataFactory.swift */; };
+		78FB1E352764DA7B00F4B3D1 /* RegistrationAndChangePersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E342764DA7B00F4B3D1 /* RegistrationAndChangePersonalData.swift */; };
+		78FB1E372764DB1E00F4B3D1 /* RegistrationUserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E362764DB1E00F4B3D1 /* RegistrationUserResult.swift */; };
+		78FB1E392764DB7200F4B3D1 /* ChangePersonalDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E382764DB7200F4B3D1 /* ChangePersonalDataResult.swift */; };
+		78FB1E3B2764DCEF00F4B3D1 /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E3A2764DCEF00F4B3D1 /* LogoutResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +74,12 @@
 		78FB1E262764BF3700F4B3D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		78FB1E292764BFDE00F4B3D1 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		78FB1E2B2764C01F00F4B3D1 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
-		78FB1E2D2764C13300F4B3D1 /*  RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RequestFactory.swift"; sourceTree = "<group>"; };
+		78FB1E2D2764C13300F4B3D1 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		78FB1E322764D8E000F4B3D1 /* RegistrationAndChangePersonalDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndChangePersonalDataFactory.swift; sourceTree = "<group>"; };
+		78FB1E342764DA7B00F4B3D1 /* RegistrationAndChangePersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndChangePersonalData.swift; sourceTree = "<group>"; };
+		78FB1E362764DB1E00F4B3D1 /* RegistrationUserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserResult.swift; sourceTree = "<group>"; };
+		78FB1E382764DB7200F4B3D1 /* ChangePersonalDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePersonalDataResult.swift; sourceTree = "<group>"; };
+		78FB1E3A2764DCEF00F4B3D1 /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +181,10 @@
 			isa = PBXGroup;
 			children = (
 				78FB1E242764BF0F00F4B3D1 /* LoginResult.swift */,
+				78FB1E3A2764DCEF00F4B3D1 /* LogoutResult.swift */,
 				78FB1E262764BF3700F4B3D1 /* User.swift */,
+				78FB1E362764DB1E00F4B3D1 /* RegistrationUserResult.swift */,
+				78FB1E382764DB7200F4B3D1 /* ChangePersonalDataResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -234,7 +247,9 @@
 			children = (
 				78FB1E292764BFDE00F4B3D1 /* AuthRequestFactory.swift */,
 				78FB1E2B2764C01F00F4B3D1 /* Auth.swift */,
-				78FB1E2D2764C13300F4B3D1 /*  RequestFactory.swift */,
+				78FB1E322764D8E000F4B3D1 /* RegistrationAndChangePersonalDataFactory.swift */,
+				78FB1E342764DA7B00F4B3D1 /* RegistrationAndChangePersonalData.swift */,
+				78FB1E2D2764C13300F4B3D1 /* RequestFactory.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -379,15 +394,20 @@
 				78FB1E2A2764BFDE00F4B3D1 /* AuthRequestFactory.swift in Sources */,
 				78FB1E252764BF0F00F4B3D1 /* LoginResult.swift in Sources */,
 				78FB1E212764BDA100F4B3D1 /* AbstractRequestFactory.swift in Sources */,
+				78FB1E352764DA7B00F4B3D1 /* RegistrationAndChangePersonalData.swift in Sources */,
 				78FB1E1C2764B9AD00F4B3D1 /* DataRequest.swift in Sources */,
 				78231CBD275E9F6E0052F5D4 /* FlowsStub.swift in Sources */,
+				78FB1E3B2764DCEF00F4B3D1 /* LogoutResult.swift in Sources */,
 				7825F218275CADE3001EEABB /* AppDelegate.swift in Sources */,
+				78FB1E392764DB7200F4B3D1 /* ChangePersonalDataResult.swift in Sources */,
 				78FB1E1A2764B92E00F4B3D1 /* ErrorParser.swift in Sources */,
+				78FB1E372764DB1E00F4B3D1 /* RegistrationUserResult.swift in Sources */,
 				78FB1E232764BE1B00F4B3D1 /* RequestRouter.swift in Sources */,
 				78FB1E272764BF3700F4B3D1 /* User.swift in Sources */,
 				7825F21A275CADE3001EEABB /* SceneDelegate.swift in Sources */,
-				78FB1E2E2764C13300F4B3D1 /*  RequestFactory.swift in Sources */,
+				78FB1E2E2764C13300F4B3D1 /* RequestFactory.swift in Sources */,
 				78231CBB275E9F260052F5D4 /* AssemblyStub.swift in Sources */,
+				78FB1E332764D8E000F4B3D1 /* RegistrationAndChangePersonalDataFactory.swift in Sources */,
 				78FB1E182764B8EC00F4B3D1 /* AbstractErrorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

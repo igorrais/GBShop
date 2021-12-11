@@ -1,5 +1,5 @@
 //
-//   RequestFactory.swift
+//  RequestFactory.swift
 //  GBShop
 //
 //  Created by Igor Rais on 11.12.2021.
@@ -27,5 +27,10 @@ class RequestFactory {
     func makeAuthRequestFatory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeRegistrationAndChangePersonalDataFactory() -> RegistrationAndChangePersonalDataFactory {
+        let errorParser = makeErrorParser()
+        return RegistrationAndChangePersonalData(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 }
