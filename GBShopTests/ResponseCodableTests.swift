@@ -46,12 +46,13 @@ class ResponseCodableTests: XCTestCase {
     }
     
     func testShouldDownloadAndParse() {
-        AF.request("https://jsonplaceholder.typicode.com/posts/1").responseCodable(errorParser: errorParser) {
-            (response: DataResponse<PostStub, AFError>) in
+        AF
+            .request("https://jsonplaceholder.typicode.com/posts/1")
+            .responseCodable(errorParser: errorParser) {
+                (response: DataResponse<PostStub, AFError>) in
                 switch response.result {
                 case .success(_): break
-                case .failure:
-                    XCTFail()
+                case .failure: XCTFail()
                 }
                 self.expectation.fulfill()
             }

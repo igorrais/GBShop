@@ -21,6 +21,9 @@
 		7873C4872766462000B25F00 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C4862766462000B25F00 /* Product.swift */; };
 		7873C48A276648EF00B25F00 /* ProductsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C489276648EF00B25F00 /* ProductsRequestFactory.swift */; };
 		7873C48C276649BB00B25F00 /* ProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C48B276649BB00B25F00 /* ProductsRequest.swift */; };
+		7873C48F27665F2200B25F00 /* LoginLogoutRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C48D27665EF100B25F00 /* LoginLogoutRequestTests.swift */; };
+		7873C4912766634A00B25F00 /* RegistrationAndChangePersonalDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C4902766634A00B25F00 /* RegistrationAndChangePersonalDataTests.swift */; };
+		7873C4932766683D00B25F00 /* ProductsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C4922766683D00B25F00 /* ProductsRequestTests.swift */; };
 		78FB1E182764B8EC00F4B3D1 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E172764B8EC00F4B3D1 /* AbstractErrorParser.swift */; };
 		78FB1E1A2764B92E00F4B3D1 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E192764B92E00F4B3D1 /* ErrorParser.swift */; };
 		78FB1E1C2764B9AD00F4B3D1 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1E1B2764B9AD00F4B3D1 /* DataRequest.swift */; };
@@ -75,6 +78,9 @@
 		7873C4862766462000B25F00 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		7873C489276648EF00B25F00 /* ProductsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequestFactory.swift; sourceTree = "<group>"; };
 		7873C48B276649BB00B25F00 /* ProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequest.swift; sourceTree = "<group>"; };
+		7873C48D27665EF100B25F00 /* LoginLogoutRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLogoutRequestTests.swift; sourceTree = "<group>"; };
+		7873C4902766634A00B25F00 /* RegistrationAndChangePersonalDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndChangePersonalDataTests.swift; sourceTree = "<group>"; };
+		7873C4922766683D00B25F00 /* ProductsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequestTests.swift; sourceTree = "<group>"; };
 		78FB1E172764B8EC00F4B3D1 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		78FB1E192764B92E00F4B3D1 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		78FB1E1B2764B9AD00F4B3D1 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
@@ -152,8 +158,11 @@
 		7825F22D275CADEB001EEABB /* GBShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				7825F22E275CADEB001EEABB /* GBShopTests.swift */,
 				780C5D6D2765EB47005C8714 /* ResponseCodableTests.swift */,
+				7873C48D27665EF100B25F00 /* LoginLogoutRequestTests.swift */,
+				7873C4902766634A00B25F00 /* RegistrationAndChangePersonalDataTests.swift */,
+				7873C4922766683D00B25F00 /* ProductsRequestTests.swift */,
+				7825F22E275CADEB001EEABB /* GBShopTests.swift */,
 			);
 			path = GBShopTests;
 			sourceTree = "<group>";
@@ -435,8 +444,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7873C4912766634A00B25F00 /* RegistrationAndChangePersonalDataTests.swift in Sources */,
 				7825F22F275CADEB001EEABB /* GBShopTests.swift in Sources */,
 				780C5D6E2765EB47005C8714 /* ResponseCodableTests.swift in Sources */,
+				7873C4932766683D00B25F00 /* ProductsRequestTests.swift in Sources */,
+				7873C48F27665F2200B25F00 /* LoginLogoutRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
