@@ -30,11 +30,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+        let registrationUser = requestFactory.makeRegistrationAndChangePersonalDataFactory()
+        registrationUser.registration(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio:  "This is good! I think I will switch to another language") { response in
+            switch response.result {
+            case .success(let registration):
+                print(registration)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         let change = requestFactory.makeRegistrationAndChangePersonalDataFactory()
         change.changePersonalData(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success(let changePersonalData):
                 print(changePersonalData)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        let products = requestFactory.makeProductsFactory()
+        products.productList(pageNumber: 1, idCategory: 1) { response in
+            switch response.result {
+            case .success(let productList):
+                print(productList)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        let product = requestFactory.makeProductsFactory()
+        product.product(idProduct: 123) { response in
+            switch response.result {
+            case .success(let product):
+                print(product)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -55,7 +82,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
-    
 }
 

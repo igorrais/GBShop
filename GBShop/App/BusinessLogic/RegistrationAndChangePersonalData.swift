@@ -8,7 +8,6 @@
 import Foundation
 import Alamofire
 
-
 class RegistrationAndChangePersonalData: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
