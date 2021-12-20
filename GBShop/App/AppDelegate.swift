@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(let login):
                 print(login)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         auth.logout(idUser: 123) { response in
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(let logout):
                 print(logout)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         let registrationUser = requestFactory.makeRegistrationAndChangePersonalDataFactory()
@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(let registration):
                 print(registration)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         let change = requestFactory.makeRegistrationAndChangePersonalDataFactory()
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(let changePersonalData):
                 print(changePersonalData)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         let products = requestFactory.makeProductsFactory()
@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(let productList):
                 print(productList)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         let product = requestFactory.makeProductsFactory()
@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(let product):
                 print(product)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         return true

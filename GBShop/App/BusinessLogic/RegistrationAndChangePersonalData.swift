@@ -12,7 +12,8 @@ class RegistrationAndChangePersonalData: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://glacial-chamber-72083.herokuapp.com/")!
+    //let baseUrl = URL(string: "http://127.0.0.1:8080/")!
     
     init (errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
@@ -36,8 +37,8 @@ extension RegistrationAndChangePersonalData:  RegistrationAndChangePersonalDataF
 extension RegistrationAndChangePersonalData {
     struct Registration: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
+        let method: HTTPMethod = .post
+        let path: String = "register"
         let idUser: Int
         let userName: String
         let password: String
@@ -63,8 +64,8 @@ extension RegistrationAndChangePersonalData {
 extension RegistrationAndChangePersonalData {
     struct Changes: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
+        let method: HTTPMethod = .post
+        let path: String = "changeUserData"
         let idUser: Int
         let userName: String
         let password: String
