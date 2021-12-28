@@ -23,13 +23,13 @@ class ProductsRequest: AbstractRequestFactory {
 }
 
 extension ProductsRequest:  ProductsRequestFactory {
-    func productList(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<[ProductListResult]>) -> Void) {
-        let requestModel = ProductListRequest(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
+    func productList(pageNumber: Int, categoryID: Int, completionHandler: @escaping (AFDataResponse<ProductListResult>) -> Void) {
+        let requestModel = ProductListRequest(baseUrl: baseUrl, pageNumber: pageNumber, categoryID: categoryID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func product(idProduct: Int, completionHandler: @escaping (AFDataResponse<Product>) -> Void) {
-        let requestModel = ProductRequest(baseUrl: baseUrl, idProduct: idProduct)
+    func product(productID: Int, completionHandler: @escaping (AFDataResponse<Product>) -> Void) {
+        let requestModel = ProductRequest(baseUrl: baseUrl, productID: productID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -40,12 +40,12 @@ extension ProductsRequest {
         let method: HTTPMethod = .post
         let path: String = "catalogData"
         let pageNumber: Int
-        let idCategory: Int
+        let categoryID: Int
         
         var parameters: Parameters? {
             return [
-                "page_number": pageNumber,
-                "id_category": idCategory,
+                "pageNumber": pageNumber,
+                "categoryID": categoryID,
             ]
         }
     }
@@ -56,11 +56,11 @@ extension ProductsRequest {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = "getGoodById"
-        let idProduct: Int
+        let productID: Int
         
         var parameters: Parameters? {
             return [
-                "id_product": idProduct,
+                "productID": productID,
             ]
         }
     }

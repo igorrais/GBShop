@@ -17,7 +17,6 @@
 		7825F22F275CADEB001EEABB /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F22E275CADEB001EEABB /* GBShopTests.swift */; };
 		7825F239275CADEB001EEABB /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F238275CADEB001EEABB /* GBShopUITests.swift */; };
 		7825F23B275CADEB001EEABB /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F23A275CADEB001EEABB /* GBShopUITestsLaunchTests.swift */; };
-		7873C485276645C600B25F00 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C484276645C500B25F00 /* ProductList.swift */; };
 		7873C4872766462000B25F00 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C4862766462000B25F00 /* Product.swift */; };
 		7873C48A276648EF00B25F00 /* ProductsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C489276648EF00B25F00 /* ProductsRequestFactory.swift */; };
 		7873C48C276649BB00B25F00 /* ProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7873C48B276649BB00B25F00 /* ProductsRequest.swift */; };
@@ -75,7 +74,6 @@
 		7825F234275CADEB001EEABB /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7825F238275CADEB001EEABB /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		7825F23A275CADEB001EEABB /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7873C484276645C500B25F00 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		7873C4862766462000B25F00 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		7873C489276648EF00B25F00 /* ProductsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequestFactory.swift; sourceTree = "<group>"; };
 		7873C48B276649BB00B25F00 /* ProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequest.swift; sourceTree = "<group>"; };
@@ -207,7 +205,6 @@
 				78FB1E262764BF3700F4B3D1 /* User.swift */,
 				78FB1E362764DB1E00F4B3D1 /* RegistrationUserResult.swift */,
 				78FB1E382764DB7200F4B3D1 /* ChangePersonalDataResult.swift */,
-				7873C484276645C500B25F00 /* ProductList.swift */,
 				7873C4862766462000B25F00 /* Product.swift */,
 				787D7CD72770D26C00842FF7 /* ProductListResult.swift */,
 			);
@@ -418,7 +415,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78FB1E2C2764C01F00F4B3D1 /* Auth.swift in Sources */,
-				7873C485276645C600B25F00 /* ProductList.swift in Sources */,
 				78FB1E2A2764BFDE00F4B3D1 /* AuthRequestFactory.swift in Sources */,
 				78FB1E252764BF0F00F4B3D1 /* LoginResult.swift in Sources */,
 				78FB1E212764BDA100F4B3D1 /* AbstractRequestFactory.swift in Sources */,

@@ -8,6 +8,6 @@
 import Foundation
 
 struct ProductListResult: Codable {
-    let page_number: Int
-    let product: ProductList?
+    let pageNumber: Int
+    let productList: [Product]
 }

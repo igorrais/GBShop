@@ -23,13 +23,13 @@ class RegistrationAndChangePersonalData: AbstractRequestFactory {
 }
 
 extension RegistrationAndChangePersonalData:  RegistrationAndChangePersonalDataFactory {
-    func registration(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<RegistrationUserResult>) -> Void) {
-        let requestModel = Registration(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
+    func registration(userID: Int, userLogin: String, userPassword: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<RegistrationUserResult>) -> Void) {
+        let requestModel = Registration(baseUrl: baseUrl, userID: userID, userLogin: userLogin, userPassword: userPassword, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func changePersonalData(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<ChangePersonalDataResult>) -> Void) {
-        let requestModel = Changes(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
+    func changePersonalData(userID: Int, userLogin: String, userPassword: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<ChangePersonalDataResult>) -> Void) {
+        let requestModel = Changes(baseUrl: baseUrl, userID: userID, userLogin: userLogin, userPassword: userPassword, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -39,9 +39,9 @@ extension RegistrationAndChangePersonalData {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = "register"
-        let idUser: Int
-        let userName: String
-        let password: String
+        let userID: Int
+        let userLogin: String
+        let userPassword: String
         let userEmail: String
         let userGender: String
         let userCreditCardNumber: String
@@ -49,13 +49,13 @@ extension RegistrationAndChangePersonalData {
         
         var parameters: Parameters? {
             return [
-                "id_user": idUser,
-                "username": userName,
-                "password": password,
-                "email": userEmail,
-                "gender": userGender,
-                "credit_card": userCreditCardNumber,
-                "bio": userBio
+                "userID": userID,
+                "userLogin": userLogin,
+                "userPassword": userPassword,
+                "userEmail": userEmail,
+                "userGender": userGender,
+                "userCreditCardNumber": userCreditCardNumber,
+                "userBio": userBio
             ]
         }
     }
@@ -66,9 +66,9 @@ extension RegistrationAndChangePersonalData {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = "changeUserData"
-        let idUser: Int
-        let userName: String
-        let password: String
+        let userID: Int
+        let userLogin: String
+        let userPassword: String
         let userEmail: String
         let userGender: String
         let userCreditCardNumber: String
@@ -76,13 +76,13 @@ extension RegistrationAndChangePersonalData {
         
         var parameters: Parameters? {
             return [
-                "id_user": idUser,
-                "username": userName,
-                "password": password,
-                "email": userEmail,
-                "gender": userGender,
-                "credit_card": userCreditCardNumber,
-                "bio": userBio
+                "userID": userID,
+                "userLogin": userLogin,
+                "userPassword": userPassword,
+                "userEmail": userEmail,
+                "userGender": userGender,
+                "userCreditCardNumber": userCreditCardNumber,
+                "userBio": userBio
             ]
         }
     }
