@@ -12,7 +12,8 @@ class RegistrationAndChangePersonalData: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://glacial-chamber-72083.herokuapp.com/")!
+    //let baseUrl = URL(string: "http://127.0.0.1:8080/")!
     
     init (errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
@@ -22,13 +23,13 @@ class RegistrationAndChangePersonalData: AbstractRequestFactory {
 }
 
 extension RegistrationAndChangePersonalData:  RegistrationAndChangePersonalDataFactory {
-    func registration(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<RegistrationUserResult>) -> Void) {
-        let requestModel = Registration(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
+    func registration(userID: Int, userLogin: String, userPassword: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<RegistrationUserResult>) -> Void) {
+        let requestModel = Registration(baseUrl: baseUrl, userID: userID, userLogin: userLogin, userPassword: userPassword, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func changePersonalData(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<ChangePersonalDataResult>) -> Void) {
-        let requestModel = Changes(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
+    func changePersonalData(userID: Int, userLogin: String, userPassword: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<ChangePersonalDataResult>) -> Void) {
+        let requestModel = Changes(baseUrl: baseUrl, userID: userID, userLogin: userLogin, userPassword: userPassword, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -36,11 +37,11 @@ extension RegistrationAndChangePersonalData:  RegistrationAndChangePersonalDataF
 extension RegistrationAndChangePersonalData {
     struct Registration: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
-        let idUser: Int
-        let userName: String
-        let password: String
+        let method: HTTPMethod = .post
+        let path: String = "register"
+        let userID: Int
+        let userLogin: String
+        let userPassword: String
         let userEmail: String
         let userGender: String
         let userCreditCardNumber: String
@@ -48,13 +49,13 @@ extension RegistrationAndChangePersonalData {
         
         var parameters: Parameters? {
             return [
-                "id_user": idUser,
-                "username": userName,
-                "password": password,
-                "email": userEmail,
-                "gender": userGender,
-                "credit_card": userCreditCardNumber,
-                "bio": userBio
+                "userID": userID,
+                "userLogin": userLogin,
+                "userPassword": userPassword,
+                "userEmail": userEmail,
+                "userGender": userGender,
+                "userCreditCardNumber": userCreditCardNumber,
+                "userBio": userBio
             ]
         }
     }
@@ -63,11 +64,11 @@ extension RegistrationAndChangePersonalData {
 extension RegistrationAndChangePersonalData {
     struct Changes: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
-        let idUser: Int
-        let userName: String
-        let password: String
+        let method: HTTPMethod = .post
+        let path: String = "changeUserData"
+        let userID: Int
+        let userLogin: String
+        let userPassword: String
         let userEmail: String
         let userGender: String
         let userCreditCardNumber: String
@@ -75,13 +76,13 @@ extension RegistrationAndChangePersonalData {
         
         var parameters: Parameters? {
             return [
-                "id_user": idUser,
-                "username": userName,
-                "password": password,
-                "email": userEmail,
-                "gender": userGender,
-                "credit_card": userCreditCardNumber,
-                "bio": userBio
+                "userID": userID,
+                "userLogin": userLogin,
+                "userPassword": userPassword,
+                "userEmail": userEmail,
+                "userGender": userGender,
+                "userCreditCardNumber": userCreditCardNumber,
+                "userBio": userBio
             ]
         }
     }

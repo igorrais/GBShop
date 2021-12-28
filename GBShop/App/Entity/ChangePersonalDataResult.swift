@@ -9,4 +9,5 @@ import Foundation
 
 struct ChangePersonalDataResult: Codable {
     let result: Int
+    let userMessage: String
 }
