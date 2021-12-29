@@ -32,7 +32,7 @@ extension Auth: AuthRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func logout(userID: Int, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
+    func logout(userID: Int, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void) {
         let requestModel = Logout(baseUrl: baseUrl, userID: userID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

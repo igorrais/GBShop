@@ -23,12 +23,12 @@ class RegistrationAndChangePersonalData: AbstractRequestFactory {
 }
 
 extension RegistrationAndChangePersonalData:  RegistrationAndChangePersonalDataFactory {
-    func registration(userID: Int, userLogin: String, userPassword: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<RegistrationUserResult>) -> Void) {
+    func registration(userID: Int, userLogin: String, userPassword: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl, userID: userID, userLogin: userLogin, userPassword: userPassword, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func changePersonalData(userID: Int, userLogin: String, userPassword: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<ChangePersonalDataResult>) -> Void) {
+    func changePersonalData(userID: Int, userLogin: String, userPassword: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void) {
         let requestModel = Changes(baseUrl: baseUrl, userID: userID, userLogin: userLogin, userPassword: userPassword, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

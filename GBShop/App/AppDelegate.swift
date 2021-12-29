@@ -56,11 +56,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error)
             }
         }
-        
         products.product(productID: 123) { response in
             switch response.result {
             case .success(let product):
                 print(product)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        let comments = requestFactory.makeProductsCommentsRequestFactory()
+        comments.productCommentsList(productID: 123) { response in
+            switch response.result {
+            case .success(let productCommentsList):
+                print(productCommentsList)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        comments.productCommentAdd(userName: "Bob", userComment: "+") { response in
+            switch response.result {
+            case .success(let productCommentsAdd):
+                print(productCommentsAdd)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        comments.productCommentDelete(commentID: 3) { response in
+            switch response.result {
+            case .success(let productCommentsDelete):
+                print(productCommentsDelete)
             case .failure(let error):
                 print(error)
             }
