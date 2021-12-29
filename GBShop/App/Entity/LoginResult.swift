@@ -9,5 +9,6 @@ import Foundation
 
 struct LoginResult: Codable {
     let result: Int
+    let userMessage: String
     let user: User
 }

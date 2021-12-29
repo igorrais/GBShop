@@ -14,56 +14,79 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let auth = requestFactory.makeAuthRequestFatory()
-        auth.login(userName: "Somebody", password: "mypassword") { response in
+        auth.login(userLogin: "Somebody", userPassword: "mypassword") { response in
             switch response.result {
             case .success(let login):
                 print(login)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
-        auth.logout(idUser: 123) { response in
+        auth.logout(userID: 123) { response in
             switch response.result {
             case .success(let logout):
                 print(logout)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
-        let registrationUser = requestFactory.makeRegistrationAndChangePersonalDataFactory()
-        registrationUser.registration(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio:  "This is good! I think I will switch to another language") { response in
+        let registrationAndChange = requestFactory.makeRegistrationAndChangePersonalDataFactory()
+        registrationAndChange.registration(userID: 123, userLogin: "Somebody", userPassword: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio:  "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success(let registration):
                 print(registration)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
-        let change = requestFactory.makeRegistrationAndChangePersonalDataFactory()
-        change.changePersonalData(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language") { response in
+        registrationAndChange.changePersonalData(userID: 123, userLogin: "Somebody", userPassword: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success(let changePersonalData):
                 print(changePersonalData)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         let products = requestFactory.makeProductsFactory()
-        products.productList(pageNumber: 1, idCategory: 1) { response in
+        products.productList(pageNumber: 1, categoryID: 1) { response in
             switch response.result {
             case .success(let productList):
                 print(productList)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
-        let product = requestFactory.makeProductsFactory()
-        product.product(idProduct: 123) { response in
+        products.product(productID: 123) { response in
             switch response.result {
             case .success(let product):
                 print(product)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
+            }
+        }
+        let comments = requestFactory.makeProductsCommentsRequestFactory()
+        comments.productCommentsList(productID: 123) { response in
+            switch response.result {
+            case .success(let productCommentsList):
+                print(productCommentsList)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        comments.productCommentAdd(userName: "Bob", userComment: "+") { response in
+            switch response.result {
+            case .success(let productCommentsAdd):
+                print(productCommentsAdd)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        comments.productCommentDelete(commentID: 3) { response in
+            switch response.result {
+            case .success(let productCommentsDelete):
+                print(productCommentsDelete)
+            case .failure(let error):
+                print(error)
             }
         }
         return true
